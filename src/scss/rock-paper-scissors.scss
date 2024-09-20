@@ -1,0 +1,185 @@
+
+:root {
+    // --background-color: #2e304b;
+    // --text-color: #d8d8d8;
+    // --nav-text-color: #FFFFFF;
+    // --nav-text-hover: #d8d8d8;
+    // --nav-item-color: #2e304b;
+    // --cursor-background: radial-gradient(circle, rgba(100, 102, 135, 0.15), transparent 80%);
+    // --button-background: #eeeaea;
+    // --hover-button-background: #d8d8d8;
+    // --button-color: #262626;
+    // --contact-button-backgroud-color: transparent;
+    // --contact-button-color: #d8d8d8;
+    // --contact-button-hover-background-color: #44476e;
+    // --blue-text-color: #5EEAD4;
+    --background-color: #000;
+    --text-color: #FFFFFF;
+    --nav-text-color: #FFFFFF;
+    --nav-text-hover: #d8d8d8;
+    --nav-item-color: #000;
+    --cursor-background: radial-gradient(circle, rgba(100, 102, 135, 0.15), transparent 80%);
+    --button-background: #FFFFFF;
+    --hover-button-background: #d8d8d8;
+    --button-color: #000;
+    --contact-button-backgroud-color: transparent;
+    --contact-button-color: #FFF;
+    --contact-button-hover-background-color: #000;
+    --blue-text-color: #FFF;
+    --social-icons-color: #FFF;
+
+}
+
+[data-theme='light'] {
+    // --background-color: #eeeaea;
+    // --text-color: #54606B;
+    // --nav-text-color: #54606B;
+    // --nav-text-hover: #434F5A;
+    // --nav-item-color: #eaeaea;
+    // --cursor-background: radial-gradient(circle, rgba(194, 194, 194, 0.40), transparent 80%);
+    // --button-background: #2e304b;
+    // --hover-button-background: #454868;
+    // --button-color: #FFFFFF;
+    // --contact-button-backgroud-color: #68cabc;
+    // --contact-button-color: #fff;
+    // --contact-button-hover-background-color: #68cabc;
+    // --blue-text-color: #5EEAD4;
+
+    --background-color: #FFF;
+    --text-color: #000;
+    --nav-text-color: #000;
+    --nav-text-hover: #000;
+    --nav-item-color: #FFF;
+    --cursor-background: radial-gradient(circle, rgba(194, 194, 194, 0.40), transparent 80%);
+    --button-background: #000;
+    --hover-button-background: #000;
+    --button-color: #FFFFFF;
+    --contact-button-backgroud-color: #000;
+    --contact-button-color: #fff;
+    --contact-button-hover-background-color: #000;
+    --blue-text-color: #000;
+    --social-icons-color: #000;
+}
+
+.result-images{
+    display: flex;
+    column-gap: 7rem;
+    justify-content: center;
+    img{
+        width: 100px;
+    }
+}
+
+.contact{
+    height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container{
+    padding: 2rem 7rem;
+    border-radius: 14px;
+    width: 400px;
+}
+
+.container.start .user-result{
+    transform-origin: left;
+    animation: userShake 0.7s ease infinite; 
+}
+
+
+@keyframes userShake {
+    50% {
+      transform: rotate(10deg);
+    }
+}
+
+.container.start .computer-result{
+    transform-origin: right;
+    animation: cpuShake 0.7s ease infinite;
+}
+
+@keyframes cpuShake {
+    50% {
+      transform: rotate(-10deg);
+    }
+  }
+
+.container.container.start{
+    pointer-events: none;
+}
+.user-result{
+    img{
+        transform: rotate(90deg);
+    }
+}
+
+.computer-result{
+    color: red;
+    img{
+        transform: rotate(-90deg) rotateY(180deg);
+    }
+}
+
+.result{
+    text-align: center;
+    font-size: 32px;
+    font-family: Manrope;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.option-image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.5;
+    transition: opacity 0.3 ease;
+    cursor: pointer;
+    img{
+        width: 50px;
+        pointer-events: none;
+    }
+    p{
+        font-size: 18px !important;
+        font-family: Manrope !important;
+        margin-top: 16px !important;
+        color: var(--text-color) !important;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+.option-image:hover{
+    opacity: 1;
+}
+.option-image.active{
+    opacity: 1;
+}
+
+.options{
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    justify-content: space-between;
+}
+
+  
+.animated-words {
+    display: flex;
+    justify-content: center; 
+    position: relative;
+    height: 44px;
+}
+
+.word {
+    font-size: 32px;
+    opacity: 0;
+    margin: 0 10px;
+    transition: opacity 0.3s ease;
+    transform: scale(1.1); 
+    position: absolute;
+    color: var(--text-color);
+}

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tijana Igrutinovic</title>
-    <link rel="stylesheet" href="src/main.css">
+    <link rel="stylesheet" href="src/scss/main.css">
 
     <!-- Manrope font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,11 +16,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
 </head>
 <body class="body-home">
     <div id="cursor"></div>
-    <div class="full-screen">
+    <div>
         <nav>
             <a class="logo" href="/">
                 <svg width="33" height="45" viewBox="0 0 160 207" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -28,10 +31,11 @@
                 </svg>
             </a>
             <ul class="nav-list">
-                <li class="nav-item"><a href="rock-paper-scissors.html">Rock Paper Scissors</a></li>
-                <li class="nav-item">feature 2</li>
-                <li class="nav-item">feature 3</li>
-                <li class="nav-item">feature 4</li>
+                <!-- <li class="nav-item"><a href="rock-paper-scissors.html">game</a></li> -->
+                <li class="nav-item "><a href="#about">About me</a></li>
+                <li class="nav-item"><a href="#skills">Skills</a></li>
+                <li class="nav-item"><a href="#experience">Work Experience</a></li>
+                <li class="nav-item"><a href="#contact">Contact</a></li>
                 <li class="resume-button">
                     <a href="CV-Tijana Igrutinovic.pdf" download="CV-Tijana-Igrutinovic">Get Resume</a>
                 </li>
@@ -42,8 +46,10 @@
                     <span class="slider"></span>
                 </label> 
             </div>        
-    </nav>
-        <div class="hero-section">
+        </nav>
+    </div>
+    <div class="hero-section">
+        <section class="left-content">
             <div class="icons">
                 <a href="https://www.linkedin.com/in/tijana-igrutinovi%C4%87/">
                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0 0 50 50">
@@ -60,9 +66,13 @@
                         <path d="M 5.9199219 6 L 20.582031 27.375 L 6.2304688 44 L 9.4101562 44 L 21.986328 29.421875 L 31.986328 44 L 44 44 L 28.681641 21.669922 L 42.199219 6 L 39.029297 6 L 27.275391 19.617188 L 17.933594 6 L 5.9199219 6 z M 9.7167969 8 L 16.880859 8 L 40.203125 42 L 33.039062 42 L 9.7167969 8 z"></path>
                     </svg>
                 </a>
-                    <div class="vertical-line"></div>
+            <div class="vertical-line"></div>
+
             </div>
 
+        </section>
+        <section class="right-contnent">
+                    
             <div class="hero-body">
                 <p class="subtitle">Hi, my name is </p>
                 <h1 id="animatedText" class="title"></h1>
@@ -75,10 +85,205 @@
                 </p>
                 <a class="contact-button" href="mailto:tijana.igrutinovic@com">Get in touch</a>
             </div>
-            <div></div>
-        </div>
-    </div>
+
+            <div class="about section" id="about">
+                <h2>about</h2>
+                <p>
+                    I am a Frontend Developer with extensive experience in building dynamic and user-friendly web applications.
+
+                    I specialize in creating responsive and visually appealing interfaces, and I am always eager to tackle new challenges and learn new technologies. My expertise includes working with HTML, CSS, JavaScript, and various frontend frameworks.                 </p>
+            </div>
+
+            <div class="skils section" id="skills">
+                <h2>skils</h2>
+                <p>
+                    resolve memory card game to see my skills!
+                </p>
+                <div class="wrapper">
+                    <ul class="cards">
+                      <li class="card">
+                        <div class="view front-view">
+                          <img src="src/images/que_icon.svg" alt="icon">
+                        </div>
+                        <div class="view back-view">
+                          <img src="src/images/img-1.png" alt="card-img">
+                        </div>
+                      </li>
+                      <li class="card">
+                        <div class="view front-view">
+                          <img src="src/images/que_icon.svg" alt="icon">
+                        </div>
+                        <div class="view back-view">
+                          <img src="src/images/img-6.png" alt="card-img">
+                        </div>
+                      </li>
+                      <li class="card">
+                        <div class="view front-view">
+                          <img src="src/images/que_icon.svg" alt="icon">
+                        </div>
+                        <div class="view back-view">
+                          <img src="src/images/img-3.png" alt="card-img">
+                        </div>
+                      </li>
+                      <li class="card">
+                        <div class="view front-view">
+                          <img src="src/images/que_icon.svg" alt="icon">
+                        </div>
+                        <div class="view back-view">
+                          <img src="src/images/img-2.png" alt="card-img">
+                        </div>
+                      </li>
+                      <li class="card">
+                        <div class="view front-view">
+                          <img src="src/images/que_icon.svg" alt="icon">
+                        </div>
+                        <div class="view back-view">
+                          <img src="src/images/img-1.png" alt="card-img">
+                        </div>
+                      </li>
+                      <li class="card">
+                        <div class="view front-view">
+                          <img src="src/images/que_icon.svg" alt="icon">
+                        </div>
+                        <div class="view back-view">
+                          <img src="src/images/img-5.png" alt="card-img">
+                        </div>
+                      </li>
+                      <li class="card">
+                        <div class="view front-view">
+                          <img src="src/images/que_icon.svg" alt="icon">
+                        </div>
+                        <div class="view back-view">
+                          <img src="src/images/img-2.png" alt="card-img">
+                        </div>
+                      </li>
+                      <li class="card">
+                        <div class="view front-view">
+                          <img src="src/images/que_icon.svg" alt="icon">
+                        </div>
+                        <div class="view back-view">
+                          <img src="src/images/img-6.png" alt="card-img">
+                        </div>
+                      </li>
+                      <li class="card">
+                        <div class="view front-view">
+                          <img src="src/images/que_icon.svg" alt="icon">
+                        </div>
+                        <div class="view back-view">
+                          <img src="src/images/img-3.png" alt="card-img">
+                        </div>
+                      </li>
+                      <li class="card">
+                        <div class="view front-view">
+                          <img src="src/images/que_icon.svg" alt="icon">
+                        </div>
+                        <div class="view back-view">
+                          <img src="src/images/img-4.png" alt="card-img">
+                        </div>
+                      </li>
+                      <li class="card">
+                        <div class="view front-view">
+                          <img src="src/images/que_icon.svg" alt="icon">
+                        </div>
+                        <div class="view back-view">
+                          <img src="src/images/img-5.png" alt="card-img">
+                        </div>
+                      </li>
+                      <li class="card">
+                        <div class="view front-view">
+                          <img src="src/images/que_icon.svg" alt="icon">
+                        </div>
+                        <div class="view back-view">
+                          <img src="src/images/img-4.png" alt="card-img">
+                        </div>
+                      </li>
+                      <li class="card">
+                        <div class="view front-view">
+                          <img src="src/images/que_icon.svg" alt="icon">
+                        </div>
+                        <div class="view back-view">
+                          <img src="src/images/img-4.png" alt="card-img">
+                        </div>
+                      </li>
+                      <li class="card">
+                        <div class="view front-view">
+                          <img src="src/images/que_icon.svg" alt="icon">
+                        </div>
+                        <div class="view back-view">
+                          <img src="src/images/img-4.png" alt="card-img">
+                        </div>
+                      </li>
+                      <li class="card">
+                        <div class="view front-view">
+                          <img src="src/images/que_icon.svg" alt="icon">
+                        </div>
+                        <div class="view back-view">
+                          <img src="src/images/img-4.png" alt="card-img">
+                        </div>
+                      </li>
+                      <li class="card">
+                        <div class="view front-view">
+                          <img src="src/images/que_icon.svg" alt="icon">
+                        </div>
+                        <div class="view back-view">
+                          <img src="src/images/img-4.png" alt="card-img">
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+              
+            </div>
+            
+            <div class="experience section" id="experience">
+                <h2>experience</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aut blanditiis, illum error perferendis velit quo animi cumque ex quos consequuntur accusantium nihil aliquid repudiandae asperiores reprehenderit doloribus, sint facilis.
+                </p>
+            </div>
+
+            <div id="contact" class=" section contact">
+                <h2>Contact</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aut blanditiis, illum error perferendis velit quo animi cumque ex quos consequuntur accusantium nihil aliquid repudiandae asperiores reprehenderit doloribus, sint facilis.
+                </p>
+                <div class="contact">
+                    <div class="container">
+                        <div class="result-field">
+                            <div class="result-images">
+                                <span class="user-result">
+                                    <img src="src/images/rock-hand.png" alt="">
+                                </span>
+                                <span class="computer-result">
+                                    <img src="src/images/rock-comp-black.png" alt="">
+                                </span>
+                            </div>
+                            <div class="result">
+                                Let's Play
+                            </div>
+                        </div>
+                
+                        <div class="options">
+                            <span class="option-image">
+                                <img src="src/images/rock-hand.png" alt="">
+                                <p>Rock</p>
+                            </span>
+                            <span class="option-image">
+                                <img src="src/images/paper-hand.png" alt="">
+                                <p>Paper</p>
+                            </span>
+                            <span class="option-image">
+                                <img src="src/images/scissors-hand.png" alt="">
+                                <p>Scissors</p>
+                            </span>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>    
 </body>
-<script src="src/index.js"></script> 
+<script type="module" src="src/js/main.js"></script> 
 
 </html>

@@ -25,7 +25,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-css": "sass src/main.scss src/main.css"
+    "build-css": "sass src/scss/.scss src/scss/main.css"
   },
   "keywords": [],
   "author": "",

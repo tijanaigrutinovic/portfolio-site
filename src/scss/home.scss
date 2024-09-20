@@ -59,8 +59,6 @@
     --contact-button-hover-background-color: #000;
     --blue-text-color: #000;
     --social-icons-color: #000;
-
-
 }
 
 
@@ -68,10 +66,18 @@
 body {
     padding: 0;
     margin: 0;
-    height: 100%;
     width: 100%;
-    overflow: hidden;
     background-color: var(--background-color);
+    overflow-x: hidden;
+}
+
+.left-content{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+}
+.right-contnent{
+    width: 80%;
 }
 a{
     text-decoration: none;
@@ -90,7 +96,10 @@ nav{
     background-color: var(--background-color);
     padding: 24px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
 }
 .nav-list{
     display: flex;
@@ -162,10 +171,9 @@ nav{
 .hero-section{
    display: flex;
    flex-direction: row;
-   padding: 80px;
-   height: 100%;
+   padding-top: 90px;
    .icons{
-        width: 20%;
+        position: fixed;
         display: flex;
         flex-direction: column;
         margin-top: 200px;
@@ -183,6 +191,8 @@ nav{
     display: flex;
     flex-direction: column;
     max-width: 760px;
+    height: 100vh;
+    text-align: right;
     .subtitle{
         color: var(--blue-text-color);
         font-size: 24px;
@@ -227,6 +237,8 @@ nav{
     width: 2px;
     height: 100%;
     background-color: var(--social-icons-color);
+    position: fixed;
+    margin-top: 200px;
 }
 
 .logo{
@@ -288,4 +300,82 @@ input:checked + .slider {
 
 input:checked + .slider:before {
     transform: translateX(26px);
+}
+
+.about{
+    max-width: 760px;
+    height: 100vh;
+    padding-top: 90px;
+    h2{
+        color: var(--blue-text-color);
+        font-size: 24px;
+        padding: 24px 0;
+        margin: 0;
+        font-family: Manrope;
+    }
+    p{
+        color: var(--text-color);
+        font-family: Manrope;
+        padding: 24px 0;
+        margin: 0;
+    }
+}
+
+.skils{
+    max-width: 760px;
+    height: 100vh;
+    padding-top: 90px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    h2{
+        color: var(--blue-text-color);
+        font-size: 24px;
+        padding: 24px 0;
+        margin: 0;
+        font-family: Manrope;
+    }
+    p{
+        color: var(--text-color);
+        font-family: Manrope;
+        padding: 24px 0;
+        margin: 0;
+    }
+}
+
+.experience{
+    max-width: 760px;
+    height: 100vh;
+    padding-top: 90px;
+    h2{
+        color: var(--blue-text-color);
+        font-size: 24px;
+        padding: 24px 0;
+        margin: 0;
+        font-family: Manrope;
+    }
+    p{
+        color: var(--text-color);
+        font-family: Manrope;
+        padding: 24px 0;
+        margin: 0;
+    }
+}
+
+.contact{
+    max-width: 760px;
+    h2{
+        color: var(--blue-text-color);
+        font-size: 24px;
+        padding: 24px 0;
+        margin: 0;
+        font-family: Manrope;
+    }
+    p{
+        color: var(--text-color);
+        font-family: Manrope;
+        padding: 24px 0;
+        margin: 0;
+    }
 }
