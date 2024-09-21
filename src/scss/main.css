@@ -1,3 +1,4 @@
+@import "https://unpkg.com/open-props/easings.min.css";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 :root {
   --background-color: #000;
@@ -64,12 +65,15 @@ nav {
   position: fixed;
   width: 100%;
   z-index: 99;
+  backdrop-filter: blur(10px);
+  background: transparent;
 }
 
 .nav-list {
   display: flex;
   justify-content: right;
   margin: 0;
+  align-items: center;
 }
 
 .nav-item {
@@ -77,7 +81,7 @@ nav {
   color: var(--nav-text-color);
   font-size: 16px;
   line-height: 24px;
-  font-family: Manrope;
+  font-family: GeistMono, monospace;
   font-weight: 500;
   cursor: pointer;
 }
@@ -86,9 +90,10 @@ nav {
   color: var(--nav-text-color);
   font-size: 16px;
   line-height: 24px;
-  font-family: Manrope;
+  font-family: GeistMono, monospace;
   font-weight: 500;
   cursor: pointer;
+  letter-spacing: 1px;
 }
 .nav-item a:hover {
   color: var(--nav-text-hover);
@@ -96,16 +101,6 @@ nav {
 
 .nav-item:hover {
   color: var(--nav-text-hover);
-}
-
-.text {
-  transition: opacity 1s ease-in-out;
-  padding: 8px;
-  color: var(--blue-text-color);
-  font-size: 16px;
-  line-height: 24px;
-  font-family: Manrope;
-  font-weight: 500;
 }
 
 .code-symbol {
@@ -127,8 +122,9 @@ nav {
   text-align: center;
   background-color: var(--button-background);
   color: var(--button-color);
-  font-family: Manrope;
+  font-family: GeistMono, monospace;
   cursor: pointer;
+  letter-spacing: 1px;
 }
 .resume-button a:hover {
   background-color: var(--hover-button-background);
@@ -160,9 +156,6 @@ nav {
   padding-bottom: 120px;
   padding-top: 90px;
 }
-.body-section .hero-body .left-hero .title {
-  color: var(--blue-text-color);
-}
 .body-section .hero-body .right-hero {
   width: 70%;
   display: flex;
@@ -180,6 +173,7 @@ nav {
   font-family: GeistMono, monospace;
   font-weight: 400;
   font-style: normal;
+  letter-spacing: 1px;
 }
 .body-section .hero-body .right-hero .title {
   font-size: 24px;
@@ -192,6 +186,7 @@ nav {
   font-style: normal;
   height: 56px;
   margin-bottom: 48px;
+  letter-spacing: 1px;
 }
 .body-section .hero-body .right-hero .description {
   color: var(--text-color);
@@ -203,6 +198,7 @@ nav {
   font-weight: 400;
   font-style: normal;
   margin: 8px 0 24px;
+  letter-spacing: 1px;
 }
 
 .contact-button {
@@ -216,6 +212,7 @@ nav {
   background-color: var(--contact-button-backgroud-color);
   font-family: GeistMono, monospace;
   align-self: end;
+  letter-spacing: 1px;
 }
 
 .contact-button:hover {
@@ -302,17 +299,20 @@ input:checked + .slider:before {
 }
 .about .about-content h2 {
   color: var(--blue-text-color);
-  font-size: 24px;
+  font-size: 32px;
   padding: 24px 0;
   margin: 0;
   font-family: GeistMono, monospace;
+  letter-spacing: 1px;
 }
 .about .about-content p {
   color: var(--text-color);
-  font-family: Manrope;
+  font-family: GeistMono, monospace;
   padding: 24px 0;
   margin: 0;
   padding-left: 40px;
+  letter-spacing: 0.5px;
+  font-size: 18px;
 }
 .about .about-image {
   width: 50%;
@@ -338,16 +338,20 @@ input:checked + .slider:before {
 }
 .skils .content h2 {
   color: var(--blue-text-color);
-  font-size: 24px;
+  font-size: 32px;
   padding: 24px 0;
   margin: 0;
   font-family: GeistMono, monospace;
+  letter-spacing: 1px;
 }
 .skils .content p {
   color: var(--text-color);
-  font-family: Manrope;
+  font-family: GeistMono, monospace;
   padding: 24px 0;
   margin: 0;
+  letter-spacing: 0.5px;
+  font-size: 18px;
+  padding-left: 40px;
 }
 .skils .skils-game {
   width: 50%;
@@ -366,17 +370,20 @@ input:checked + .slider:before {
 }
 .experience .experience-left h2 {
   color: var(--blue-text-color);
-  font-size: 24px;
+  font-size: 32px;
   padding: 24px 0;
   margin: 0;
   font-family: GeistMono, monospace;
+  letter-spacing: 1px;
 }
 .experience .experience-left p {
   color: var(--text-color);
-  font-family: Manrope;
+  font-family: GeistMono, monospace;
   padding: 24px 0;
   margin: 0;
   padding-left: 40px;
+  letter-spacing: 0.5px;
+  font-size: 18px;
 }
 .experience .experience-right {
   width: 50%;
@@ -394,13 +401,16 @@ input:checked + .slider:before {
 .experience .experience-right .experience-cards .ex-card h3 {
   color: var(--text-color);
   margin: 0;
+  font-family: GeistMono, monospace;
 }
 .experience .experience-right .experience-cards .ex-card p {
   color: var(--text-color);
+  font-family: GeistMono, monospace;
 }
 .experience .experience-right .experience-cards .ex-card span {
   color: var(--text-color);
   width: 100%;
+  font-family: GeistMono, monospace;
 }
 .experience .experience-right .experience-cards .ex-card:hover {
   background-color: var(--memory-game-background);
@@ -526,6 +536,152 @@ input:checked + .slider:before {
     opacity: 0;
   }
 }
+.sun-and-moon > :is(.moon, .sun, .sun-beams) {
+  transform-origin: center center;
+}
+
+.sun-and-moon > :is(.moon, .sun) {
+  fill: var(--icon-fill);
+}
+
+.theme-toggle:is(:hover, :focus-visible) > .sun-and-moon > :is(.moon, .sun) {
+  fill: var(--icon-fill-hover);
+}
+
+.sun-and-moon > .sun-beams {
+  stroke: var(--icon-fill);
+  stroke-width: 2px;
+}
+
+.theme-toggle:is(:hover, :focus-visible) .sun-and-moon > .sun-beams {
+  stroke: var(--icon-fill-hover);
+}
+
+[data-theme=dark] .sun-and-moon > .sun {
+  transform: scale(1.75);
+}
+
+[data-theme=dark] .sun-and-moon > .sun-beams {
+  opacity: 0;
+}
+
+[data-theme=dark] .sun-and-moon > .moon > circle {
+  transform: translate(-7px);
+}
+
+@supports (cx: 1) {
+  [data-theme=dark] .sun-and-moon > .moon > circle {
+    transform: translate(0);
+    cx: 17;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .sun-and-moon > .sun {
+    transition: transform 0.5s var(--ease-elastic-3);
+  }
+  .sun-and-moon > .sun-beams {
+    transition: transform 0.5s var(--ease-elastic-4), opacity 0.5s var(--ease-3);
+  }
+  .sun-and-moon .moon > circle {
+    transition: transform 0.25s var(--ease-out-5);
+  }
+  @supports (cx: 1) {
+    .sun-and-moon .moon > circle {
+      transition: cx 0.25s var(--ease-out-5);
+    }
+  }
+  [data-theme=dark] .sun-and-moon > .sun {
+    transform: scale(1.75);
+    transition-timing-function: var(--ease-3);
+    transition-duration: 0.25s;
+  }
+  [data-theme=dark] .sun-and-moon > .sun-beams {
+    transform: rotate(-25deg);
+    transition-duration: 0.15s;
+  }
+  [data-theme=dark] .sun-and-moon > .moon > circle {
+    transition-delay: 0.25s;
+    transition-duration: 0.5s;
+  }
+}
+.theme-toggle {
+  --size: 2rem;
+  --icon-fill: hsl(210 10% 30%);
+  --icon-fill-hover: hsl(210 10% 15%);
+  background: none;
+  border: none;
+  padding: 0;
+  inline-size: var(--size);
+  block-size: var(--size);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  outline-offset: 5px;
+}
+
+.theme-toggle > svg {
+  inline-size: 100%;
+  block-size: 100%;
+  stroke-linecap: round;
+}
+
+[data-theme=dark] .theme-toggle {
+  --icon-fill: hsl(210 10% 70%);
+  --icon-fill-hover: hsl(210 15% 90%) ;
+}
+
+@media (hover: none) {
+  .theme-toggle {
+    --size: 48px ;
+  }
+}
+html {
+  block-size: 100%;
+  color-scheme: light;
+}
+
+html[data-theme=dark] {
+  color-scheme: dark;
+}
+
+@supports not (color-scheme: dark) {
+  html[data-theme=dark] {
+    background: #111;
+  }
+}
+[data-theme=dark] .github-corner {
+  fill: indigo;
+}
+
+@-webkit-keyframes octocat-wave {
+  0%, to {
+    transform: rotate(0);
+  }
+  20%, 60% {
+    transform: rotate(-25deg);
+  }
+  40%, 80% {
+    transform: rotate(10deg);
+  }
+}
+@keyframes octocat-wave {
+  0%, to {
+    transform: rotate(0);
+  }
+  20%, 60% {
+    transform: rotate(-25deg);
+  }
+  40%, 80% {
+    transform: rotate(10deg);
+  }
+}
+[data-theme=dark] .sun-and-moon .moon {
+  transform: translateX(0) scale(1); /* Mesec je vidljiv */
+  fill: var(--icon-fill); /* Dodeljuje boju mesecu */
+}
+
 :root {
   --background-color: #000;
   --text-color: #FFFFFF;
@@ -613,7 +769,7 @@ input:checked + .slider:before {
 .result {
   text-align: center;
   font-size: 32px;
-  font-family: Manrope;
+  font-family: GeistMono, monospace;
   font-weight: 500;
   color: var(--text-color);
 }
@@ -632,7 +788,7 @@ input:checked + .slider:before {
 }
 .option-image p {
   font-size: 18px !important;
-  font-family: Manrope !important;
+  font-family: GeistMono, monospace !important;
   margin-top: 16px !important;
   color: var(--text-color) !important;
   padding: 0;
