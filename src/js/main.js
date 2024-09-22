@@ -4,6 +4,7 @@ import { darkLightTheme } from './dark-light-theme.js';
 import { memoryGame } from './memory-game.js';
 import { rockPaperScissors } from './rock-paper-scissors.js';
 import { setComputerImage } from './rock-paper-scissors.js';
+import { hamburgerMenu } from './hamburger-menu.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     animatedHero();
@@ -12,4 +13,5 @@ document.addEventListener('DOMContentLoaded', () => {
     memoryGame();
     rockPaperScissors();
     setComputerImage();
+    hamburgerMenu();
 });

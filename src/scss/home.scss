@@ -54,9 +54,9 @@
     --button-background: #000;
     --hover-button-background: #000;
     --button-color: #FFFFFF;
-    --contact-button-backgroud-color: #000;
-    --contact-button-color: #fff;
-    --contact-button-hover-background-color: #000;
+    --contact-button-backgroud-color: transparent;
+    --contact-button-color: #000;
+    --contact-button-hover-background-color: transparent;
     --blue-text-color: #000;
     --social-icons-color: #000;
     --image-opacity: 0.8;
@@ -90,12 +90,13 @@ nav{
     background-color: var(--background-color);
     padding: 24px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     position: fixed;
     width: 100%;
     z-index: 99;
     backdrop-filter: blur(10px);
     background: transparent;
+    box-sizing: border-box
 }
 .nav-list{
     display: flex;
@@ -129,6 +130,90 @@ nav{
     color: var(--nav-text-hover);
 }
 
+.hamburger {
+    display: none; 
+    flex-direction: column;
+    cursor: pointer;
+    svg{
+        fill: var(--nav-text-color);
+        margin: 4px;
+        transition: all 0.3s;
+    }
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background-color: var(--nav-text-color);
+    margin: 4px;
+    transition: all 0.3s;
+}
+
+@media (max-width: 1100px) {
+    .nav-list {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        background-color: var(--background-color);
+        top: 64px; 
+        right: 0;
+        width: 100%;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex; 
+    }
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Poluprovidna pozadina */
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--background-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+}
+
+.close {
+    color: var(--nav-text-color);
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    fill: var(--text-color);
+    padding: 24px;
+}
+
+.modal-nav-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    padding-top: 80px;
+    text-align: center;
+}
+
+.modal-nav-list .nav-item {
+    margin: 10px 0;
+}
 
 
 .code-symbol {
@@ -142,30 +227,33 @@ nav{
         display: inline-block;
         padding: 12px 16px;
         border-radius: 57px;
-        font-size: 12px;
-        line-height: 18px;
-        text-transform: uppercase;
+        font-size: 14px;
+        line-height: 12px;
         font-weight: 700;
         text-align: center;
         background-color: var(--button-background);
         color: var(--button-color);
         font-family: GeistMono, monospace;
         cursor: pointer;
-        letter-spacing: 1px;
+        letter-spacing: 2px;
     }
     a:hover{
         background-color: var(--hover-button-background);
     }
+    @media screen and (max-width:1100px) {
+        text-align: center;
+    }
 }
 
 .body-section{
-   display: flex;
-   flex-direction: row;
    padding: 90px;
    max-width: 1200px;
    margin: 0px auto;
    justify-content: center;
    padding-top: 0;
+   @media screen and (max-width: 1000px) {
+    padding: 15px;
+    }
 //    .icons{
 //         position: fixed;
 //         display: flex;
@@ -187,6 +275,10 @@ nav{
     max-width: 1200px;
     height: 100vh;
     text-align: right;
+    @media screen and (max-width: 800px) {
+        flex-direction: column;
+        height: unset;
+    }
         .left-hero{
             width: 50%;
             display: flex;
@@ -195,6 +287,9 @@ nav{
             align-items: center;
             padding-bottom: 120px;
             padding-top: 90px;
+            @media screen and (max-width: 800px) {
+                width: 0%;
+            }
         }
         .right-hero{
             width: 70%;
@@ -202,6 +297,10 @@ nav{
             flex-direction: column;
             justify-content: flex-end;
             padding-bottom: 80px;
+            @media screen and (max-width: 800px) {
+                width: 100%;
+                padding-bottom: 0;
+            }
             .subtitle{
                 color: var(--blue-text-color);
                 font-size: 24px;
@@ -213,6 +312,9 @@ nav{
                 font-weight: 400;
                 font-style: normal;
                 letter-spacing: 1px;
+                @media screen and (max-width: 800px) {
+                    font-size: 16px;
+                }
             }
             .title{
                 font-size: 24px;
@@ -226,7 +328,9 @@ nav{
                 height: 56px;
                 margin-bottom: 48px;
                 letter-spacing: 1px;
-
+                @media screen and (max-width: 800px) {
+                    font-size: 32px;
+                }
             }
             .description{
                 color: var(--text-color);
@@ -239,6 +343,9 @@ nav{
                 font-style: normal;
                 margin: 8px 0 24px;
                 letter-spacing: 1px;
+                @media screen and (max-width: 800px) {
+                    font-size: 16px;
+                }
             }
         }
    }
@@ -251,7 +358,7 @@ nav{
     text-align: center;
     max-width: 150px;
     margin-top: 32px;
-    color: var(--contact-button-color);
+    color: var(--text-color);
     background-color: var(--contact-button-backgroud-color);
     font-family: GeistMono,monospace;   
     align-self: end;
@@ -273,7 +380,6 @@ nav{
 .logo{
     width: 42px;
     height: 42px;
-    margin-left: 80px;
 }
 
 #cursor {
@@ -335,8 +441,17 @@ input:checked + .slider:before {
     padding-top: 90px;
     display: flex;
     flex-direction: row;
+    @media screen and (max-width: 1000px) {
+        flex-direction: column;
+        padding-top: 60px;
+    }
     .about-content{
         width: 50%;
+        @media screen and (max-width: 1000px) {
+            width: 100%;
+            max-width: 700px;
+            align-self: center;
+        }
         h2{
             color: var(--blue-text-color);
             font-size: 32px;
@@ -344,6 +459,11 @@ input:checked + .slider:before {
             margin: 0;
             font-family: GeistMono, monospace;
             letter-spacing: 1px;
+            @media screen and (max-width: 1000px) {
+                font-size: 24px;
+                padding: 16px 0;
+                max-width: 700px;
+            }
         }
         p{
             color: var(--text-color);
@@ -352,17 +472,30 @@ input:checked + .slider:before {
             margin: 0;
             padding-left: 40px;
             letter-spacing: 0.5px;
-            font-size: 18px;
+            font-size: 16px;
+            @media screen and (max-width: 1000px) {
+                font-size: 14px;
+                padding: 16px 0;
+                padding-left: 20px;
+                max-width: 700px;
+            }
         }
     }
     .about-image{
         width: 50%;
         display: flex;
         justify-content: flex-end;
+        @media screen and (max-width: 1000px) {
+            width: 100%;
+            justify-content: center;
+        }
         img{
             width:400px;
             opacity: var(--image-opacity);
             border-radius: 5px;
+            @media screen and (max-width: 420px) {
+                width: 100%;
+            }
         }
     }
 }
@@ -374,8 +507,17 @@ input:checked + .slider:before {
     align-items: flex-start;
     justify-content: center;
     flex-direction: row;
+    @media screen and (max-width: 1000px) {
+        flex-direction: column;
+        padding-top: 60px;
+    }
     .content{
         width: 50%;
+        @media screen and (max-width: 1000px) {
+            width: 100%;
+            max-width: 700px;
+            align-self: center;
+        }
         h2{
             color: var(--blue-text-color);
             font-size: 32px;
@@ -383,6 +525,11 @@ input:checked + .slider:before {
             margin: 0;
             font-family: GeistMono, monospace;
             letter-spacing: 1px;
+            @media screen and (max-width: 1000px) {
+                font-size: 24px;
+                padding: 16px 0;
+                max-width: 700px;
+            }
         }
         p{
             color: var(--text-color);
@@ -390,14 +537,27 @@ input:checked + .slider:before {
             padding: 24px 0;
             margin: 0;
             letter-spacing: 0.5px;
-            font-size: 18px;
+            font-size: 16px;
             padding-left: 40px;
+            @media screen and (max-width: 1000px) {
+                font-size: 14px;
+                padding: 16px 0;
+                padding-left: 20px;
+                max-width: 700px;
+            }
         }
     }
     .skils-game{
         width: 50%;
         display: flex;
         justify-content: flex-end;
+        justify-content: center;
+        flex-direction: column;
+        align-items: last baseline;
+        @media screen and (max-width: 1000px) {
+            width: 100%;
+            align-items: center;
+        }
     }
     
 }
@@ -407,8 +567,17 @@ input:checked + .slider:before {
     display: flex;
     flex-direction: row;   
     padding-top: 200px; 
+    @media screen and (max-width: 1000px) {
+        flex-direction: column;
+        padding-top: 60px;
+    }
     .experience-left{
         width: 50%;
+        @media screen and (max-width: 1000px) {
+            width: 100%;
+            max-width: 700px;
+            align-self: center;
+        }
         h2{
             color: var(--blue-text-color);
             font-size: 32px;
@@ -416,6 +585,10 @@ input:checked + .slider:before {
             margin: 0;
             font-family: GeistMono, monospace;
             letter-spacing: 1px;
+            @media screen and (max-width: 1000px) {
+                font-size: 24px;
+                padding: 16px 0;
+            }
         }
         p{
             color: var(--text-color);
@@ -424,11 +597,21 @@ input:checked + .slider:before {
             margin: 0;
             padding-left: 40px;
             letter-spacing: 0.5px;
-            font-size: 18px;
+            font-size: 16px;
+            @media screen and (max-width: 1000px) {
+                font-size: 14px;
+                padding: 16px 0;
+                padding-left: 20px;
+            }
         }
     }
     .experience-right{
         width: 50%;
+        @media screen and (max-width: 1000px) {
+            width: 100%;
+            max-width: 700px;
+            align-self: center;
+        }
         .experience-cards{
             display: flex;
             flex-direction: column;
@@ -437,21 +620,32 @@ input:checked + .slider:before {
                 flex-direction: row;
                 padding: 20px;
                 border-radius: 5px;
+                @media screen and (max-width: 1000px) {
+                    flex-direction: column;
+                }
                 h3{
                     color: var(--text-color);
                     margin: 0;
                     font-family: GeistMono, monospace;
+                    font-size: 20px;
+                    @media screen and (max-width: 1000px) {
+                        font-size: 18px;
+                        max-width: 700px;
+                    }
                 }
                 p{
                     color: var(--text-color);
                     font-family: GeistMono, monospace;
-
+                    font-size: 14px;
+                    max-width: 700px;
+                    
                 }
                 span{
-                    color: var(--text-color);
+                    color: grey;
                     width: 100%;
                     font-family: GeistMono, monospace;
-
+                    font-size: 14px;
+                    max-width: 150px;
                 }
             }
             .ex-card:hover{
@@ -471,15 +665,24 @@ input:checked + .slider:before {
     max-width: 1200px;
     margin-top: 200px;
     border-top: 2px solid var(--text-color);
+    @media screen and (max-width: 1000px) {
+        margin-top: 60px;
+    }
     .footer-contact{
         display: flex;
         flex-direction: row;
         width: 100%;
+        @media screen and (max-width: 1000px) {
+            flex-direction: column;
+        }
         .menu{
             width: 25%;
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
+            @media screen and (max-width: 1000px) {
+                width: 100%;
+            }
             ul{
                 padding: 0;
                 li{
@@ -490,6 +693,22 @@ input:checked + .slider:before {
                         color: var(--text-color);
                         letter-spacing: 1px;
                         font-size: 16px;
+                        display: inline-flex;
+                        align-items: center;
+                        text-decoration: none;
+                        color: inherit;
+                        transition: color 0.3s ease;
+                    }
+                    .menu-item:hover .arrow-icon {
+                        transform: translate(5px, -5px);
+                        transition: transform 0.3s ease;
+                      }
+                    
+                    .arrow-icon {
+                        width: 16px;
+                        fill: var(--text-color);
+                        transition: transform 0.3s ease;
+                        margin-left: 10px;
                     }
                     .pointer{
                         cursor: pointer;
@@ -662,7 +881,7 @@ input:checked + .slider:before {
     cursor:pointer;
     touch-action:manipulation;
     -webkit-tap-highlight-color:transparent;
-    outline-offset:5px
+    outline-offset:5px;
 }
 .theme-toggle>svg{
     inline-size:100%;
@@ -723,3 +942,6 @@ html[data-theme=dark]{
     transform: translateX(0) scale(1); /* Mesec je vidljiv */
     fill: var(--icon-fill); /* Dodeljuje boju mesecu */
 }
+
+
+
