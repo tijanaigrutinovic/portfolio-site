@@ -138,6 +138,7 @@ nav {
   }
   .hamburger {
     display: flex;
+    justify-content: center;
   }
 }
 .modal {
@@ -895,6 +896,15 @@ input:checked + .slider:before {
   touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;
   outline-offset: 5px;
+  position: fixed;
+  z-index: 100;
+  top: 24px;
+  right: 24px;
+}
+@media screen and (max-width: 1100px) {
+  .theme-toggle {
+    right: 80px;
+  }
 }
 
 .theme-toggle > svg {
@@ -910,7 +920,12 @@ input:checked + .slider:before {
 
 @media (hover: none) {
   .theme-toggle {
-    --size: 48px ;
+    --size: 48px;
+  }
+}
+@media screen and (hover: none) and (max-width: 1100px) {
+  .theme-toggle {
+    --size: 40px;
   }
 }
 html {

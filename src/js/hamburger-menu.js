@@ -4,14 +4,13 @@ export function hamburgerMenu() {
     const closeModal = document.getElementById('close');
 
     hamburger.addEventListener('click', () => {
-        modal.style.display = 'block'; // Prikazuj modal
+        modal.style.display = 'block'; 
     });
 
     closeModal.addEventListener('click', () => {
-        modal.style.display = 'none'; // Zatvori modal
+        modal.style.display = 'none'; 
     });
 
-    // Zatvori modal ako se klikne van njega
     window.addEventListener('click', (event) => {
         if (event.target === modal) {
             modal.style.display = 'none';

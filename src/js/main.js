@@ -7,11 +7,11 @@ import { setComputerImage } from './rock-paper-scissors.js';
 import { hamburgerMenu } from './hamburger-menu.js';
 
 document.addEventListener('DOMContentLoaded', () => {
+    hamburgerMenu();
     animatedHero();
     customCursor();
     darkLightTheme();
     memoryGame();
     rockPaperScissors();
     setComputerImage();
-    hamburgerMenu();
 });
