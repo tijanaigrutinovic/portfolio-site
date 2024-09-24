@@ -2,8 +2,6 @@ import { animatedHero } from './animated-hero.js';
 import { customCursor } from './custom-cursor.js';
 import { darkLightTheme } from './dark-light-theme.js'; 
 import { memoryGame } from './memory-game.js';
-import { rockPaperScissors } from './rock-paper-scissors.js';
-import { setComputerImage } from './rock-paper-scissors.js';
 import { hamburgerMenu } from './hamburger-menu.js';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -12,6 +10,4 @@ document.addEventListener('DOMContentLoaded', () => {
     customCursor();
     darkLightTheme();
     memoryGame();
-    rockPaperScissors();
-    setComputerImage();
 });
