@@ -357,7 +357,7 @@ nav {
 @media screen and (max-width: 1000px) {
   .about {
     flex-direction: column;
-    padding-top: 60px;
+    padding-top: 80px;
   }
 }
 .about .about-content {
@@ -435,7 +435,7 @@ nav {
 @media screen and (max-width: 1000px) {
   .skils {
     flex-direction: column;
-    padding-top: 60px;
+    padding-top: 80px;
   }
 }
 .skils .content {
@@ -504,7 +504,7 @@ nav {
 @media screen and (max-width: 1000px) {
   .experience {
     flex-direction: column;
-    padding-top: 60px;
+    padding-top: 80px;
   }
 }
 .experience .experience-left {
