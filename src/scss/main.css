@@ -61,6 +61,7 @@ nav {
   width: 100%;
   z-index: 99;
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   background: transparent;
   box-sizing: border-box;
 }
@@ -862,7 +863,8 @@ nav {
 }
 @media screen and (hover: none) and (max-width: 1100px) {
   .theme-toggle {
-    --size: 40px;
+    --size: 32px;
+    top: 30px;
   }
 }
 html {
