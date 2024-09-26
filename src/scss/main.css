@@ -405,7 +405,6 @@ nav {
   border: 1px var(--text-color) solid;
   mix-blend-mode: normal;
 }
-
 .about {
   padding-top: 90px;
   display: flex;

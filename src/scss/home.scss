@@ -446,6 +446,9 @@ nav{
     background-color: transparent;
     border: 1px var(--text-color) solid;
     mix-blend-mode: normal;
+    @media screen and (max-width: 600) {
+        
+    }
 }
 
 // .switch {
