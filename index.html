@@ -19,7 +19,7 @@
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </head>
 <body class="body-home">
     <div id="cursor"></div>
@@ -338,6 +338,36 @@
                     </div>
                 </div>
             </div>
+
+            <div class="experience section" id="contact">
+              <div class="experience-left">
+                  <h2>// Contact</h2>
+                  <p style="margin-bottom: 40px;">
+                    Let's build something beautiful together!                    
+                  </p>
+              </div>
+              <div class="experience-right">
+                <form class="contact-form">
+                  <div class="input-container">
+                    <input type="text" class="name" name="name" placeholder=" " required>
+                    <label for="name">Your Name</label>
+                </div>
+                
+                <div class="input-container">
+                    <input type="email" class="email" name="email" placeholder=" " required>
+                    <label for="email">Email</label>
+                </div>
+                
+                <div class="input-container">
+                    <textarea class="message" name="message" placeholder=" " required></textarea>
+                    <label for="message">Message</label>
+                </div>
+                
+                <button type="submit" class="contact-button"><span>Send</span></button>
+              </form>
+              </div>
+              
+          </div>
                 
             <div id="contact" class="section contact">
                 <div class="footer-contact">
@@ -401,7 +431,24 @@
             </div>
         </section>
     </div>    
+    
 </body>
 <script type="module" src="src/js/main.js"></script> 
-
+<script type="text/javascript">
+  (function() {
+      emailjs.init("mtUZ3GM2_Mojd-7vU"); // Zameniti sa svojim EmailJS User ID
+  })();
+  
+  document.querySelector(".contact-form").addEventListener("submit", function(event) {
+      event.preventDefault(); // Spreči slanje forme
+      
+      // Poziv EmailJS
+      emailjs.sendForm("service_eylw2do", "template_cn3c0xn", this)
+          .then(function() {
+              alert('Your message is send! Thank you!'); // Ova poruka može sadržati i dodatne informacije
+          }, function(error) {
+              alert('Došlo je do greške: ' + JSON.stringify(error));
+          });
+  });
+</script>
 </html>

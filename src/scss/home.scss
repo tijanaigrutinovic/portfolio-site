@@ -1009,5 +1009,63 @@ html[data-theme=dark]{
     fill: var(--icon-fill); /* Dodeljuje boju mesecu */
 }
 
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    button{
+        width: 100%;
+        cursor: pointer;
+    }
+    input, textarea {
+        border: none; /* Ukloni ceo border */
+        border-bottom: 1px solid var(--text-color); /* Dodaj samo donji border */
+        outline: none; /* Ukloni outline pri fokusu */
+        padding: 10px; /* Dodaj padding za bolji izgled */
+        font-size: 16px; /* Podešavanje veličine fonta */
+        transition: border-color 0.3s ease; /* Glatna tranzicija za promenu boje */
+        background-color: transparent;
+        min-width: 100% !important;
+        border-left: 1px solid var(--text-color);
+        border-right: 1px solid var(--text-color);
+        font-family: GeistMono, monospace;
+        @media screen and (max-width: 1000px) {
+            padding-right: 0;
+            padding-left: 0;
 
-
+        }
+    }
+    
+    .input-container {
+        position: relative;
+        margin-bottom: 20px; /* Razmak između input polja */
+    }
+    
+    
+    label {
+        position: absolute;
+        left: 10px; /* Razmak s leve strane */
+        top: 10px; /* Pozicija iznad input polja */
+        transition: 0.2s ease all; /* Glatna tranzicija */
+        pointer-events: none; /* Onemogući interakciju sa label */
+        color: var(--text-color);
+        font-family: GeistMono, monospace;
+        font-size: 16px;
+    }
+    
+    /* Kada se input polje fokusira ili sadrži tekst, label ide gore */
+    input:focus + label,
+    input:not(:placeholder-shown) + label,
+    textarea:focus + label,
+    textarea:not(:placeholder-shown) + label {
+        top: -10px; /* Pomeranje label-a gore */
+        left: 10px; /* Održava poziciju */
+        font-size: 12px; /* Manja veličina fonta */
+        color: var(--focus-border-color); /* Promeni boju pri fokusu */
+    }
+    
+    /* Stilizacija za donji border pri fokusu */
+    input:focus, textarea:focus {
+       
+    }
+    
+}
