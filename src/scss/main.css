@@ -47,8 +47,21 @@ body {
   overflow-x: hidden;
 }
 
+:root {
+  --background-color: #000; /* Svetli mod */
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background-color: #FFF; /* Tamni mod */
+  }
+}
 a {
   text-decoration: none;
+}
+
+html {
+  background-color: var(--background-color);
 }
 
 li {
