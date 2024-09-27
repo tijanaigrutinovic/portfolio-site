@@ -13,11 +13,19 @@ export function darkLightTheme() {
     const setPreference = () => {
         localStorage.setItem(storageKey, theme.value);
         reflectPreference();
+        setThemeColor(theme.value === 'dark' ? '#000000' : '#ffffff'); // Postavi boju toolbar-a
     };
 
     const reflectPreference = () => {
         document.documentElement.setAttribute('data-theme', theme.value);
         themeToggle.setAttribute('aria-label', theme.value);
+    };
+
+    const setThemeColor = (color) => {
+        const metaThemeColor = document.querySelector("meta[name='theme-color']");
+        if (metaThemeColor) {
+            metaThemeColor.setAttribute("content", color);
+        }
     };
 
     const theme = {
@@ -27,28 +35,14 @@ export function darkLightTheme() {
     reflectPreference();
 
     themeToggle.addEventListener('click', () => {
-        themeToggle.classList.add('rotate'); 
-        setTimeout(() => themeToggle.classList.remove('rotate'), 500);
         theme.value = theme.value === 'dark' ? 'light' : 'dark';
         setPreference();
+        themeToggle.classList.add('rotate'); 
+        setTimeout(() => themeToggle.classList.remove('rotate'), 500);
     });
 
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', ({ matches: isDark }) => {
         theme.value = isDark ? 'dark' : 'light';
         setPreference();
-    });
-    function setThemeColor(color) {
-        const metaThemeColor = document.querySelector("meta[name='theme-color']");
-        if (metaThemeColor) {
-            metaThemeColor.setAttribute("content", color);
-        }
-    }
-    
-    themeToggle.addEventListener('click', () => {
-        const isDark = theme.value === 'dark';
-        const newColor = isDark ? '#000000' : '#ffffff'; 
-        setThemeColor(newColor);
-        theme.value = isDark ? 'light' : 'dark'; 
-        reflectPreference(); 
     });
 }
