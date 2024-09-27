@@ -27,8 +27,8 @@ export function darkLightTheme() {
     reflectPreference();
 
     themeToggle.addEventListener('click', () => {
-        themeToggle.classList.add('rotate'); // Dodaj rotaciju
-        setTimeout(() => themeToggle.classList.remove('rotate'), 500); // Ukloni posle 500ms
+        themeToggle.classList.add('rotate'); 
+        setTimeout(() => themeToggle.classList.remove('rotate'), 500);
         theme.value = theme.value === 'dark' ? 'light' : 'dark';
         setPreference();
     });
@@ -36,5 +36,19 @@ export function darkLightTheme() {
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', ({ matches: isDark }) => {
         theme.value = isDark ? 'dark' : 'light';
         setPreference();
+    });
+    function setThemeColor(color) {
+        const metaThemeColor = document.querySelector("meta[name='theme-color']");
+        if (metaThemeColor) {
+            metaThemeColor.setAttribute("content", color);
+        }
+    }
+    
+    themeToggle.addEventListener('click', () => {
+        const isDark = theme.value === 'dark';
+        const newColor = isDark ? '#000000' : '#ffffff'; 
+        setThemeColor(newColor);
+        theme.value = isDark ? 'light' : 'dark'; 
+        reflectPreference(); 
     });
 }
