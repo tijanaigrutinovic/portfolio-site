@@ -27,7 +27,6 @@
     --contact-button-hover-background-color: #000;
     --blue-text-color: #FFF;
     --social-icons-color: #FFF;
-    --image-opacity: 0.5;
     --hover-text-color: #FFF;
 }
 
@@ -60,7 +59,6 @@
     --contact-button-hover-background-color: transparent;
     --blue-text-color: #000;
     --social-icons-color: #000;
-    --image-opacity: 0.8;
     --hover-text-color: #000;
 }
 
@@ -459,9 +457,6 @@ nav{
     background-color: transparent;
     border: 1px var(--text-color) solid;
     mix-blend-mode: normal;
-    @media screen and (max-width: 600) {
-        
-    }
 }
 
 // .switch {
@@ -562,7 +557,6 @@ nav{
         }
         img{
             width:400px;
-            opacity: var(--image-opacity);
             border-radius: 5px;
             @media screen and (max-width: 420px) {
                 width: 100%;

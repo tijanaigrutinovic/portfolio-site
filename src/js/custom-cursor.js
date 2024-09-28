@@ -14,5 +14,9 @@ export function customCursor() {
     document.addEventListener('DOMContentLoaded', () => {
         cursor.style.opacity = '0';
     });
+    const mediaQuery = window.matchMedia('(max-width: 600px)')
+        if (mediaQuery.matches) {
+        cursor.style.opacity = '0'; 
+        }
 }
 
