@@ -5,7 +5,7 @@ export function animatedHero() {
     let index = 0;
     let isDeleting = false;
     let speed = 100;
-    let pauseAfterTyping = 600; 
+    let pauseAfterTyping = 3000; 
 
     function typeWriter() {
         if (!isDeleting) {
