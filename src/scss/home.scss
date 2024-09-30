@@ -763,6 +763,10 @@ nav{
                         text-decoration: none;
                         color: inherit;
                         transition: color 0.3s ease;
+
+                        &:hover{
+                            color: var(--nav-text-hover);
+                        }
                     }
                     .menu-item:hover .arrow-icon {
                         transform: translate(5px, -5px);
