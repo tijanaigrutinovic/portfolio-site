@@ -1,40 +1,29 @@
 @charset "UTF-8";
 @import "https://unpkg.com/open-props/easings.min.css";
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 :root {
-  --background-color: #000;
+  --background-color: #0E0E0E;
   --text-color: #FFFFFF;
   --nav-text-color: #FFFFFF;
-  --nav-text-hover: #d8d8d8;
-  --nav-item-color: #000;
-  --cursor-background: radial-gradient(circle, rgba(100, 102, 135, 0.15), transparent 80%);
+  --nav-text-hover: #b3b3b3;
   --button-background: #FFFFFF;
-  --hover-button-background: #000;
-  --button-color: #000;
-  --contact-button-backgroud-color: transparent;
-  --contact-button-color: #FFF;
-  --contact-button-hover-background-color: #000;
+  --hover-button-background: #0E0E0E;
+  --button-color: #0E0E0E;
   --blue-text-color: #FFF;
-  --social-icons-color: #FFF;
   --hover-text-color: #FFF;
+  --memory-game-background: #161616;
 }
 
 [data-theme=light] {
   --background-color: #FFF;
-  --text-color: #000;
-  --nav-text-color: #000;
-  --nav-text-hover: #000;
-  --nav-item-color: #FFF;
-  --cursor-background: radial-gradient(circle, rgba(0, 0, 0, 0.20), transparent 80%);
-  --button-background: #000;
+  --text-color: #0E0E0E;
+  --nav-text-color: #0E0E0E;
+  --nav-text-hover: #54606b;
+  --button-background: #0E0E0E;
   --hover-button-background: #FFF;
   --button-color: #FFFFFF;
-  --contact-button-backgroud-color: transparent;
-  --contact-button-color: #000;
-  --contact-button-hover-background-color: transparent;
-  --blue-text-color: #000;
-  --social-icons-color: #000;
-  --hover-text-color: #000;
+  --blue-text-color: #0E0E0E;
+  --hover-text-color: #0E0E0E;
+  --memory-game-background: #ececec;
 }
 
 body {
@@ -43,10 +32,6 @@ body {
   width: 100%;
   background-color: var(--background-color);
   overflow-x: hidden;
-}
-
-:root {
-  --background-color: #000; /* Svetli mod */
 }
 
 @media (prefers-color-scheme: light) {
@@ -358,7 +343,6 @@ nav {
   border: 1px solid var(--text-color);
   border-radius: 30px;
   text-align: center;
-  max-width: 150px;
   margin-top: 32px;
   color: var(--button-color);
   background-color: var(--button-background);
@@ -722,6 +706,9 @@ nav {
   color: inherit;
   transition: color 0.3s ease;
 }
+.contact .footer-contact .menu ul li .menu-item:hover {
+  color: var(--nav-text-hover);
+}
 .contact .footer-contact .menu ul li .menu-item:hover .arrow-icon {
   transform: translate(5px, -5px);
   transition: transform 0.3s ease;
@@ -735,10 +722,6 @@ nav {
 .contact .footer-contact .menu ul li .pointer {
   cursor: pointer;
 }
-.contact .footer-contact .menu ul li .pointer:hover {
-    color: var(--nav-text-hover);
-}
-
 .contact .footer-contact .menu ul li .underline {
   text-decoration: underline;
 }
@@ -1029,37 +1012,6 @@ html[data-theme=dark] {
   font-size: 12px; /* Manja veličina fonta */
   color: var(--focus-border-color); /* Promeni boju pri fokusu */
 }
-/* Import Google Font - Poppins */
-:root {
-  --background-color: #000;
-  --text-color: #FFFFFF;
-  --nav-text-color: #FFFFFF;
-  --nav-text-hover: #d8d8d8;
-  --nav-item-color: #000;
-  --cursor-background: radial-gradient(circle, rgba(100, 102, 135, 0.15), transparent 80%);
-  --button-background: #FFFFFF;
-  --button-color: #000;
-  --contact-button-color: #FFF;
-  --blue-text-color: #FFF;
-  --social-icons-color: #FFF;
-  --memory-game-background: #161616;
-}
-
-[data-theme=light] {
-  --background-color: #FFF;
-  --text-color: #000;
-  --nav-text-color: #000;
-  --nav-text-hover: #000;
-  --nav-item-color: #FFF;
-  --cursor-background: radial-gradient(circle, rgba(194, 194, 194, 0.40), transparent 80%);
-  --button-background: #000;
-  --button-color: #FFFFFF;
-  --contact-button-color: #fff;
-  --blue-text-color: #000;
-  --social-icons-color: #000;
-  --memory-game-background: #ececec;
-}
-
 .wrapper {
   padding: 25px;
   border-radius: 10px;

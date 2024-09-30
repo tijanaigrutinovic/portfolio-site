@@ -21,7 +21,7 @@ export function darkLightTheme() {
 
         // Dinamički menja boju toolbar-a u Safari-u
         const isDark = theme.value === 'dark';
-        const newColor = isDark ? '#000000' : '#ffffff'; // Boje za tamnu i svetlu temu
+        const newColor = isDark ? '#0E0E0E' : '#ffffff'; // Boje za tamnu i svetlu temu
         setThemeColor(newColor);
     };
 

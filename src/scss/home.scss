@@ -1,65 +1,30 @@
 
 :root {
-    // --background-color: #2e304b;
-    // --text-color: #d8d8d8;
-    // --nav-text-color: #FFFFFF;
-    // --nav-text-hover: #d8d8d8;
-    // --nav-item-color: #2e304b;
-    // --cursor-background: radial-gradient(circle, rgba(100, 102, 135, 0.15), transparent 80%);
-    // --button-background: #eeeaea;
-    // --hover-button-background: #d8d8d8;
-    // --button-color: #262626;
-    // --contact-button-backgroud-color: transparent;
-    // --contact-button-color: #d8d8d8;
-    // --contact-button-hover-background-color: #44476e;
-    // --blue-text-color: #5EEAD4;
-    --background-color: #000;
+    --background-color: #0E0E0E;
     --text-color: #FFFFFF;
     --nav-text-color: #FFFFFF;
-    --nav-text-hover: #d8d8d8;
-    --nav-item-color: #000;
-    --cursor-background: radial-gradient(circle, rgba(100, 102, 135, 0.15), transparent 80%);
-    --button-background: #FFFFFF;
-    --hover-button-background: #000;
-    --button-color: #000;
-    --contact-button-backgroud-color: transparent;
-    --contact-button-color: #FFF;
-    --contact-button-hover-background-color: #000;
+    --nav-text-hover: #b3b3b3;
+    --button-background: #FFFFFF; 
+    --hover-button-background: #0E0E0E; 
+    --button-color: #0E0E0E; 
     --blue-text-color: #FFF;
-    --social-icons-color: #FFF;
     --hover-text-color: #FFF;
+    --memory-game-background: #161616;
+
 }
 
 [data-theme='light'] {
-    // --background-color: #eeeaea;
-    // --text-color: #54606B;
-    // --nav-text-color: #54606B;
-    // --nav-text-hover: #434F5A;
-    // --nav-item-color: #eaeaea;
-    // --cursor-background: radial-gradient(circle, rgba(194, 194, 194, 0.40), transparent 80%);
-    // --button-background: #2e304b;
-    // --hover-button-background: #454868;
-    // --button-color: #FFFFFF;
-    // --contact-button-backgroud-color: #68cabc;
-    // --contact-button-color: #fff;
-    // --contact-button-hover-background-color: #68cabc;
-    // --blue-text-color: #5EEAD4;
-
     --background-color: #FFF;
-    --text-color: #000;
-    --nav-text-color: #000;
-    --nav-text-hover: #000;
-    --nav-item-color: #FFF;
-    --cursor-background: radial-gradient(circle, rgba(0, 0, 0, 0.20), transparent 80%);
-    --button-background: #000;
+    --text-color: #0E0E0E;
+    --nav-text-color: #0E0E0E;
+    --nav-text-hover: #54606b;
+    --button-background: #0E0E0E;
     --hover-button-background: #FFF;
     --button-color: #FFFFFF;
-    --contact-button-backgroud-color: transparent;
-    --contact-button-color: #000;
-    --contact-button-hover-background-color: transparent;
-    --blue-text-color: #000;
-    --social-icons-color: #000;
-    --hover-text-color: #000;
+    --blue-text-color: #0E0E0E;
+    --hover-text-color: #0E0E0E;
+    --memory-game-background: #ececec;
+
 }
 
 
@@ -70,10 +35,6 @@ body {
     width: 100%;
     background-color: var(--background-color);
     overflow-x: hidden;
-}
-
-:root {
-    --background-color: #000; /* Svetli mod */
 }
 
 @media (prefers-color-scheme: light) {
@@ -390,7 +351,6 @@ nav{
     border: 1px solid var(--text-color);
     border-radius: 30px;
     text-align: center;
-    max-width: 150px;
     margin-top: 32px;
     color: var(--button-color);
     background-color: var(--button-background);
