@@ -738,6 +738,7 @@ nav {
 .contact .footer-contact .menu ul li .pointer:hover {
     color: var(--nav-text-hover);
 }
+
 .contact .footer-contact .menu ul li .underline {
   text-decoration: underline;
 }
