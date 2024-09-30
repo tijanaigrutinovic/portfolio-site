@@ -672,6 +672,23 @@ nav{
                     font-size: 14px;
                     max-width: 150px;
                 }
+                .tehnologies{
+                    
+                    text-align: center;
+                    font-size: 18px;
+                    font-family: GeistMono,monospace;
+                    font-weight: 400;
+                    font-style: normal;
+                    color: var(--text-color);
+                    text-align: center;
+                    padding: 4px 8px;
+                    border: 2px solid var(--text-color);
+                    border-radius: 200px;
+                    margin-right: 10px;
+                    margin-bottom: 10px;
+                    width: max-content;
+                    height: max-content;
+                }
             }
             .ex-card:hover{
                 background-color: var(--memory-game-background);
