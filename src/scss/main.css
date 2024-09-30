@@ -997,16 +997,10 @@ html[data-theme=dark] {
   font-size: 16px; /* Podešavanje veličine fonta */
   transition: border-color 0.3s ease; /* Glatna tranzicija za promenu boje */
   background-color: transparent;
-  min-width: 100% !important;
+  min-width: 95% !important;
   border-left: 1px solid var(--text-color);
   border-right: 1px solid var(--text-color);
   font-family: GeistMono, monospace;
-}
-@media screen and (max-width: 1000px) {
-  .contact-form input, .contact-form textarea {
-    padding-right: 0;
-    padding-left: 0;
-  }
 }
 .contact-form .input-container {
   position: relative;
