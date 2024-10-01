@@ -34,11 +34,8 @@ body {
   overflow-x: hidden;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --background-color: #FFF; /* Tamni mod */
-  }
-}
+
+
 a {
   text-decoration: none;
 }
