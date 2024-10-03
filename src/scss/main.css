@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import "https://unpkg.com/open-props/easings.min.css";
 :root {
   --background-color: #0E0E0E;
@@ -33,8 +32,6 @@ body {
   background-color: var(--background-color);
   overflow-x: hidden;
 }
-
-
 
 a {
   text-decoration: none;
@@ -141,7 +138,7 @@ nav {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7); /* Poluprovidna pozadina */
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .modal-content {
@@ -977,27 +974,25 @@ html[data-theme=dark] {
   }
 }
 [data-theme=dark] .sun-and-moon .moon {
-  transform: translateX(0) scale(1); /* Mesec je vidljiv */
-  fill: var(--icon-fill); /* Dodeljuje boju mesecu */
+  transform: translateX(0) scale(1);
+  fill: var(--icon-fill);
 }
 
 .contact-form {
   display: flex;
   flex-direction: column;
-  /* Kada se input polje fokusira ili sadrži tekst, label ide gore */
-  /* Stilizacija za donji border pri fokusu */
 }
 .contact-form button {
   width: 100%;
   cursor: pointer;
 }
 .contact-form input, .contact-form textarea {
-  border: none; /* Ukloni ceo border */
-  border-bottom: 1px solid var(--text-color); /* Dodaj samo donji border */
-  outline: none; /* Ukloni outline pri fokusu */
-  padding: 10px; /* Dodaj padding za bolji izgled */
-  font-size: 16px; /* Podešavanje veličine fonta */
-  transition: border-color 0.3s ease; /* Glatna tranzicija za promenu boje */
+  border: none;
+  border-bottom: 1px solid var(--text-color);
+  outline: none;
+  padding: 10px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
   background-color: transparent;
   min-width: 95% !important;
   border-left: 1px solid var(--text-color);
@@ -1006,14 +1001,14 @@ html[data-theme=dark] {
 }
 .contact-form .input-container {
   position: relative;
-  margin-bottom: 20px; /* Razmak između input polja */
+  margin-bottom: 20px;
 }
 .contact-form label {
   position: absolute;
-  left: 10px; /* Razmak s leve strane */
-  top: 10px; /* Pozicija iznad input polja */
-  transition: 0.2s ease all; /* Glatna tranzicija */
-  pointer-events: none; /* Onemogući interakciju sa label */
+  left: 10px;
+  top: 10px;
+  transition: 0.2s ease all;
+  pointer-events: none;
   color: var(--text-color);
   font-family: GeistMono, monospace;
   font-size: 16px;
@@ -1022,10 +1017,10 @@ html[data-theme=dark] {
 .contact-form input:not(:placeholder-shown) + label,
 .contact-form textarea:focus + label,
 .contact-form textarea:not(:placeholder-shown) + label {
-  top: -10px; /* Pomeranje label-a gore */
-  left: 10px; /* Održava poziciju */
-  font-size: 12px; /* Manja veličina fonta */
-  color: var(--focus-border-color); /* Promeni boju pri fokusu */
+  top: -10px;
+  left: 10px;
+  font-size: 12px;
+  color: var(--focus-border-color);
 }
 .wrapper {
   padding: 25px;
