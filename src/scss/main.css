@@ -58,6 +58,11 @@ nav {
   background: transparent;
   box-sizing: border-box;
 }
+@media screen and (max-width: 1100px) {
+  nav {
+    padding: 18px 24px;
+  }
+}
 
 .nav-list {
   display: flex;
@@ -949,7 +954,7 @@ nav {
 @media screen and (hover: none) and (max-width: 1100px) {
   .theme-toggle {
     --size: 32px;
-    top: 30px;
+    top: 25px;
   }
 }
 html {
