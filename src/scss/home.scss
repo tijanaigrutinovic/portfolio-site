@@ -644,6 +644,8 @@ nav{
         .experience-cards{
             display: flex;
             flex-direction: column;
+            height: 500px;
+            overflow: scroll;
             .ex-card{
                 display: flex;
                 flex-direction: row;

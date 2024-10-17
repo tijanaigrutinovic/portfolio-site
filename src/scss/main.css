@@ -146,10 +146,12 @@ nav {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
   background-color: var(--background-color);
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
   width: 100%;
   height: 100%;
 }
@@ -205,6 +207,7 @@ nav {
   height: 100%;
   background-color: var(--hover-button-background);
   transition: top 0.5s ease;
+  -webkit-transition: top 0.5s ease;
   z-index: 0;
   border-radius: 30px;
 }
@@ -212,6 +215,7 @@ nav {
   position: relative;
   z-index: 1;
   transition: color 0.7s ease;
+  -webkit-transition: color 0.7s ease;
 }
 .resume-button a:hover::before {
   top: 0;
@@ -357,6 +361,7 @@ nav {
   height: 100%;
   background-color: var(--hover-button-background);
   transition: top 0.5s ease;
+  -webkit-transition: top 0.5s ease;
   z-index: 0;
   border-radius: 30px;
 }
@@ -365,6 +370,7 @@ nav {
   position: relative;
   z-index: 1;
   transition: color 0.7s ease;
+  -webkit-transition: color 0.7s ease;
 }
 
 .contact-button:hover::before {
@@ -384,6 +390,7 @@ nav {
 #cursor {
   pointer-events: none;
   transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
   opacity: 0;
   position: fixed;
   width: 30px;
@@ -607,6 +614,8 @@ nav {
 .experience .experience-right .experience-cards {
   display: flex;
   flex-direction: column;
+  height: 500px;
+  overflow: scroll;
 }
 .experience .experience-right .experience-cards .ex-card {
   display: flex;
@@ -717,18 +726,22 @@ nav {
   text-decoration: none;
   color: inherit;
   transition: color 0.3s ease;
+  -webkit-transition: color 0.3s ease;
 }
 .contact .footer-contact .menu ul li .menu-item:hover {
   color: var(--nav-text-hover);
 }
 .contact .footer-contact .menu ul li .menu-item:hover .arrow-icon {
   transform: translate(5px, -5px);
+  -webkit-transform: translate(5px, -5px);
   transition: transform 0.3s ease;
+  -webkit-transition: transform 0.3s ease;
 }
 .contact .footer-contact .menu ul li .arrow-icon {
   width: 16px;
   fill: var(--text-color);
   transition: transform 0.3s ease;
+  -webkit-transition: transform 0.3s ease;
   margin-left: 10px;
 }
 .contact .footer-contact .menu ul li .pointer {
@@ -1082,28 +1095,25 @@ html[data-theme=dark] {
   border-radius: 7px;
   background: #fff;
   pointer-events: none;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  -webkit-transition: -webkit-transform 0.25s linear;
   transition: transform 0.25s linear;
 }
 
-.card .front-view img {
-  width: 19px;
-}
-
-.card .back-view img {
-  max-width: 45px;
-}
-
 .card .back-view {
+  -webkit-transform: rotateY(-180deg);
   transform: rotateY(-180deg);
 }
 
 .card.flip .back-view {
+  -webkit-transform: rotateY(0);
   transform: rotateY(0);
 }
 
 .card.flip .front-view {
+  -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
 
