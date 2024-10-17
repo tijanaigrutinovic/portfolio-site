@@ -646,6 +646,10 @@ nav{
             flex-direction: column;
             height: 500px;
             overflow: scroll;
+            @media screen and (max-width: 1000px) {
+                height: unset;
+                overflow: scroll;
+            }
             .ex-card{
                 display: flex;
                 flex-direction: row;

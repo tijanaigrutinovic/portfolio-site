@@ -617,6 +617,12 @@ nav {
   height: 500px;
   overflow: scroll;
 }
+@media screen and (max-width: 1000px) {
+  .experience .experience-right .experience-cards {
+    height: unset;
+    overflow: scroll;
+  }
+}
 .experience .experience-right .experience-cards .ex-card {
   display: flex;
   flex-direction: row;
