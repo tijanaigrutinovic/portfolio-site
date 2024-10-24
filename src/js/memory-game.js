@@ -1,9 +1,13 @@
 export function memoryGame() {
     const cards = document.querySelectorAll(".card");
-
+    const resolveBtn = document.querySelector(".resolve-game"); 
+    const resolveGameCopy = document.querySelector('.resolve-game-copy');
     let matched = 0;
     let cardOne, cardTwo;
     let disableDeck = false;
+
+    resolveBtn.style.display = "none";
+    resolveGameCopy.style.display = "none";
 
     function flipCard({target: clickedCard}) {
         if(cardOne !== clickedCard && !disableDeck) {
@@ -26,7 +30,14 @@ export function memoryGame() {
             cardOne.removeEventListener("click", flipCard);
             cardTwo.removeEventListener("click", flipCard);
             cardOne = cardTwo = "";
-            return disableDeck = false;
+            disableDeck = false;
+
+            if (matched === 1) {
+                resolveBtn.style.display = "block"; 
+                resolveGameCopy.style.display = "block";
+            }
+
+            return;
         }
         setTimeout(() => {
             cardOne.classList.add("shake");
@@ -53,7 +64,20 @@ export function memoryGame() {
             imgTag.src = `src/images/img-${arr[i]}.png`;
             card.addEventListener("click", flipCard);
         });
+
+        resolveBtn.style.display = "none";
+        resolveGameCopy.style.display = "none";
     }
+
+    function resolveGame() {
+        cards.forEach(card => {
+            if (!card.classList.contains("flip")) {
+                card.classList.add("flip");
+            }
+        });
+    }
+
+    resolveBtn.addEventListener("click", resolveGame);
 
     shuffleCard();
         

@@ -3,7 +3,10 @@
   border-radius: 10px;
   background: var(--memory-game-background);
   width: 300px;
-
+  align-self: end;
+  @media screen and (max-width: 1000px) {
+    align-self: center;
+  }
 }
 .cards, .card, .view{
   display: flex;
@@ -102,4 +105,71 @@
 
 .message{
   max-width: 350px;
+}
+
+.resolve-game-copy{
+  color: var(--text-color);
+  font-family: GeistMono, monospace;
+  padding: 24px 0;
+  margin: 0;
+  letter-spacing: 0.5px;
+  font-size: 16px;
+  text-align: end;
+  max-width: 400px;
+  align-self: end;
+  @media screen and (max-width: 1000px) {
+      font-size: 14px;
+      padding: 16px 0;
+      max-width: 700px;
+      align-self: center;
+      text-align: center;
+  }
+}
+
+.resolve-game-section{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+.resolve-game {
+  align-self: end;
+  position: relative;
+  padding: 10px;
+  border: 1px solid var(--text-color);
+  border-radius: 30px;
+  text-align: center;
+  color: var(--button-color);
+  background-color: var(--button-background);
+  font-family: GeistMono, monospace;
+  letter-spacing: 1px;
+  overflow: hidden; 
+  font-size: 18px;
+  padding: 8px 14px;
+  z-index: 1;
+  position: relative;
+  cursor: pointer;
+  @media screen and (max-width: 1000px) {
+    align-self: center;
+  }
+}
+
+.resolve-game::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--hover-button-background);
+  transition: top 0.5s ease;
+  z-index: -1;
+  border-radius: 30px;
+}
+
+.resolve-game:hover::before {
+  top: 0;
+}
+
+.resolve-game:hover {
+  color: var(--text-color);
 }
