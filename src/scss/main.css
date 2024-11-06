@@ -261,7 +261,7 @@ nav {
   }
 }
 .body-section .hero-body .left-hero {
-  width: 50%;
+  width: 30%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -289,7 +289,6 @@ nav {
 }
 .body-section .hero-body .right-hero .subtitle {
   color: var(--blue-text-color);
-  font-size: 24px;
   margin: 0;
   font-family: GeistMono, monospace;
   text-align: left;
@@ -297,6 +296,7 @@ nav {
   font-family: GeistMono, monospace;
   font-weight: 400;
   font-style: normal;
+  margin: 4px 0;
   letter-spacing: 1px;
 }
 @media screen and (max-width: 800px) {
@@ -683,6 +683,23 @@ nav {
 .experience .experience-right .experience-cards .ex-card:hover {
   background-color: var(--memory-game-background);
   border-radius: 5px;
+}
+
+.tehnologies {
+  text-align: center;
+  font-size: 18px;
+  font-family: GeistMono, monospace;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--text-color);
+  text-align: center;
+  padding: 4px 8px;
+  border: 2px solid var(--text-color);
+  border-radius: 200px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: max-content;
+  height: max-content;
 }
 
 .contact {
